@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# ---------------- CONFIG ----------------
+# ---------------- Config ----------------
 st.set_page_config(page_title="Similarity Measure - Otsu & Angle Distance Signature", layout="wide")
 
 st.title("🔍 Similarity Measure pada Citra Digital")
@@ -18,7 +18,7 @@ mode = st.sidebar.selectbox(
 
 st.divider()
 
-# ---------------- FUNGSI PENDUKUNG ----------------
+# ---------------- Function ----------------
 def process_image(uploaded_file):
     """Proses utama: Otsu + kontur + centroid + signature"""
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
@@ -49,7 +49,7 @@ def process_image(uploaded_file):
 
 
 # ==============================================================
-# 🖼️ MODE 1 — Analisis 1 Gambar
+# Mode 1 — Analisis 1 Gambar
 # ==============================================================
 if mode == "Analisis 1 Gambar":
     st.header("🖼️ Analisis Citra Tunggal")
@@ -104,7 +104,7 @@ if mode == "Analisis 1 Gambar":
 
 
 # ==============================================================
-# ⚖️ MODE 2 — Perbandingan 2 Gambar
+# Mode 2 — Perbandingan 2 Gambar
 # ==============================================================
 elif mode == "Perbandingan 2 Gambar":
     st.header("⚖️ Pengukuran Kemiripan Dua Gambar")
